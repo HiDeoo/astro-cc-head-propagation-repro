@@ -1,0 +1,15 @@
+---
+import Page from './Page.astro';
+import { getCustomData } from '../utils/data';
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+const data = getCustomData(title)
+---
+
+<Page title={data.title}>
+	This is a custom page.
+</Page>

@@ -1,0 +1,8 @@
+---
+import Page from "../components/Page.astro";
+import { getData } from "../utils/data";
+
+const { Content, title } = await getData('guide');
+---
+
+<Page {title}><Content /></Page>
